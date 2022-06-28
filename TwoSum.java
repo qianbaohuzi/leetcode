@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -63,9 +62,7 @@ public class TwoSum {
         }
 
         Set<Integer> keySet = map.keySet();
-        Iterator<Integer> iterator = keySet.iterator();
-        while (iterator.hasNext()) {
-            Integer a = iterator.next();
+        for (Integer a : keySet) {
             int b = target - a;
             if (map.containsKey(b)) {
                 return new int[]{map.get(a), map.get(b)};
